@@ -1,0 +1,247 @@
+.hero-slider-container {
+  position: relative;
+  width: 100%;
+  height: 520px;
+  overflow: hidden;
+  background-color: #121212;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Individual Slide */
+.hero-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center right;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.04);
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 1.2s cubic-bezier(0.4, 0, 0.2, 1),
+              visibility 0.8s;
+  display: flex;
+  align-items: center;
+}
+
+.hero-slide.active {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+
+/* Gradient dark overlay so text is clearly readable on left */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(12, 11, 10, 0.92) 0%,
+    rgba(18, 16, 14, 0.78) 45%,
+    rgba(22, 19, 17, 0.25) 100%
+  );
+  z-index: 1;
+}
+
+/* Slide Content on Left */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 620px;
+  padding-left: 70px;
+  padding-right: 20px;
+}
+
+/* Animation trigger on text when slide activates */
+.hero-slide.active .hero-badge,
+.hero-slide.active .hero-title,
+.hero-slide.active .hero-description,
+.hero-slide.active .hero-actions {
+  animation: slideFadeUp 0.8s ease-out forwards;
+}
+
+.hero-slide.active .hero-title {
+  animation-delay: 0.15s;
+}
+
+.hero-slide.active .hero-description {
+  animation-delay: 0.28s;
+}
+
+.hero-slide.active .hero-actions {
+  animation-delay: 0.4s;
+}
+
+@keyframes slideFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Badge (Pill with sparkle) */
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(226, 165, 93, 0.15);
+  border: 1px solid rgba(226, 165, 93, 0.35);
+  color: #dfaa67;
+  padding: 5px 14px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  margin-bottom: 20px;
+}
+
+/* Title - Editorial Serif */
+.hero-title {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 54px;
+  line-height: 1.1;
+  font-weight: 700;
+  color: #f7eedf;
+  margin: 0 0 18px 0;
+  letter-spacing: -0.5px;
+  text-transform: uppercase;
+}
+
+/* Subtitle */
+.hero-description {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #cfc5b8;
+  margin: 0 0 32px 0;
+  max-width: 520px;
+  font-weight: 400;
+}
+
+/* Actions Row */
+.hero-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 22px;
+}
+
+/* CTA Golden Button */
+.hero-btn {
+  background-color: #dfaa67;
+  color: #2b170c;
+  padding: 13px 26px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+  box-shadow: 0 4px 14px rgba(223, 170, 103, 0.3);
+}
+
+.hero-btn:hover {
+  background-color: #ebb978;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(223, 170, 103, 0.45);
+}
+
+/* Certified Handcrafted Badge */
+.hero-certified {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #c9bcae;
+  font-size: 11px;
+  letter-spacing: 1px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+/* Navigation Arrow Buttons */
+.slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(4px);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 5;
+  transition: all 0.25s ease;
+}
+
+.slider-arrow:hover {
+  background: rgba(223, 170, 103, 0.9);
+  color: #1a120b;
+  transform: translateY(-50%) scale(1.08);
+}
+
+.left-arrow {
+  left: 18px;
+}
+
+.right-arrow {
+  right: 18px;
+}
+
+/* Bottom Dots / Indicators */
+.slider-dots {
+  position: absolute;
+  bottom: 22px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 5;
+}
+
+.slider-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.slider-dot.active {
+  width: 26px; /* Pill expansion effect */
+  border-radius: 12px;
+  background-color: #dfaa67;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .hero-slider-container {
+    height: 480px;
+  }
+  .hero-content {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  .hero-title {
+    font-size: 34px;
+  }
+  .hero-description {
+    font-size: 13.5px;
+  }
+  .slider-arrow {
+    display: none; /* Mobile pe clean view */
+  }
+}

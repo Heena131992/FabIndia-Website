@@ -1,0 +1,164 @@
+.admin-login-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  background-color: #faf7f2;
+}
+
+.admin-login-card {
+  width: 100%;
+  max-width: 400px;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  border: 1px solid #e0d5c1;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+}
+
+.admin-login-card h2 {
+  font-family: Georgia, serif;
+  color: #4b1822;
+  margin-bottom: 8px;
+}
+
+.admin-login-card p {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.admin-input-group {
+  margin-bottom: 16px;
+}
+
+.admin-input-group label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.admin-input-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.admin-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #4b1822;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.admin-error {
+  background-color: #ffebee;
+  color: #c62828;
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 13px;
+  margin-bottom: 14px;
+}
+
+/* Dashboard Styles */
+.dashboard-container {
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.dashboard-header h2 {
+  font-family: Georgia, serif;
+  color: #4b1822;
+}
+
+.logout-btn {
+  background: transparent;
+  border: 1px solid #4b1822;
+  color: #4b1822;
+  padding: 6px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-bottom: 30px;
+}
+
+.stat-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 6px;
+  border: 1px solid #e8e0d5;
+}
+
+.stat-card h4 {
+  font-size: 13px;
+  color: #777;
+  margin-bottom: 8px;
+}
+
+.stat-val {
+  font-size: 22px;
+  font-weight: bold;
+  color: #222;
+}
+
+.stat-val.warning {
+  color: #d97706;
+}
+
+.table-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 6px;
+  border: 1px solid #e8e0d5;
+}
+
+.table-card h3 {
+  font-size: 16px;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.admin-table th, .admin-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.status-pill {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status-pill.delivered { background: #e8f5e9; color: #2e7d32; }
+.status-pill.processing { background: #fff8e1; color: #f57f17; }
+.status-pill.shipped { background: #e1f5fe; color: #0288d1; }

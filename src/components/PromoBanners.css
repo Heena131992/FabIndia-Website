@@ -1,0 +1,160 @@
+.promo-banners-section {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 20px 24px 70px 24px;
+  background-color: #faf7f2;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.promo-banners-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+/* Banner Card Base */
+.promo-banner-card {
+  position: relative;
+  min-height: 290px;
+  border-radius: 14px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.35s ease;
+}
+
+.promo-banner-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 28px rgba(35, 20, 15, 0.18);
+}
+
+/* Backgrounds */
+/* Card 1: Gifting with pink gift box & gold ribbons */
+.gifting-card {
+  background-color: #2b1117;
+  background-image: url('https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=900&q=80');
+  background-size: cover;
+  background-position: center right;
+}
+
+/* Card 2: Golden/Olive Festive Ombre Gradient */
+.look-card {
+  background: radial-gradient(circle at 85% 20%, #d8a846 0%, #7e6c38 45%, #2d382d 100%);
+}
+
+/* Dark Gradient Overlay for text readability */
+.promo-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(20, 15, 15, 0.2) 0%,
+    rgba(25, 12, 16, 0.75) 60%,
+    rgba(18, 8, 12, 0.95) 100%
+  );
+  z-index: 1;
+  transition: opacity 0.3s ease;
+}
+
+.promo-banner-card:hover .promo-card-overlay {
+  opacity: 0.92;
+}
+
+/* Card Content Area */
+.promo-card-content {
+  position: relative;
+  z-index: 2;
+  padding: 32px 36px;
+  max-width: 500px;
+}
+
+.promo-tag {
+  display: inline-block;
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: #e5b985;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.promo-heading {
+  font-family: Georgia, "Playfair Display", serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 10px 0;
+  line-height: 1.2;
+}
+
+.promo-description {
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: #dfd4cb;
+  margin: 0 0 22px 0;
+  font-weight: 400;
+}
+
+/* Buttons */
+.promo-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  padding: 11px 22px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.btn-arrow {
+  font-size: 14px;
+  transition: transform 0.2s ease;
+}
+
+.promo-btn:hover .btn-arrow {
+  transform: translateX(4px);
+}
+
+/* Golden Button (Left Card) */
+.gold-btn {
+  background-color: #dfaa67;
+  color: #2b170c;
+}
+
+.gold-btn:hover {
+  background-color: #ebb978;
+}
+
+/* White Button (Right Card) */
+.white-btn {
+  background-color: #ffffff;
+  color: #252420;
+}
+
+.white-btn:hover {
+  background-color: #f3ece4;
+}
+
+/* Responsive */
+@media (max-width: 920px) {
+  .promo-banners-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .promo-banner-card {
+    min-height: 250px;
+  }
+
+  .promo-card-content {
+    padding: 24px;
+  }
+
+  .promo-heading {
+    font-size: 24px;
+  }
+}

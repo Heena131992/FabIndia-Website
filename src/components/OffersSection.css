@@ -1,0 +1,271 @@
+/* src/components/OffersSection.css */
+
+/* Container & Section Layout */
+.offers-section {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 48px 24px;
+  background-color: #faf9f6;
+  box-sizing: border-box;
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Header Area */
+.offers-header {
+  margin-bottom: 36px;
+}
+
+.offers-eyebrow {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #7b2633;
+  margin-bottom: 8px;
+}
+
+.offers-main-title {
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: clamp(2rem, 3vw, 2.5rem);
+  font-weight: 800;
+  color: #2b0b10;
+  margin: 0;
+  line-height: 1.2;
+}
+
+/* 3-Card Grid */
+.offers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  align-items: stretch;
+}
+
+/* Base Card Styling */
+.offer-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 14px;
+  padding: 32px 24px 28px;
+  box-sizing: border-box;
+  text-align: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  min-height: 400px;
+}
+
+.offer-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+}
+
+.offer-card-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Pill / Badge */
+.offer-card-badge {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 4px 14px;
+  border-radius: 9999px;
+  margin-bottom: 24px;
+  display: inline-block;
+}
+
+/* Card Heading */
+.offer-card-heading {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin: 0 0 10px 0;
+}
+
+/* Discount Text Block */
+.offer-discount-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 4px 0 16px 0;
+}
+
+.offer-discount-large {
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: clamp(2.4rem, 3.2vw, 3.1rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.offer-discount-small {
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  margin-top: 4px;
+}
+
+/* Card Description */
+.offer-card-description {
+  font-size: 12px;
+  line-height: 1.6;
+  max-width: 250px;
+  margin: 6px auto 0 auto;
+}
+
+/* Button Base */
+.offer-card-btn {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+/* --- THEME 1: WOMENSWEAR (Light Blush / Maroon) --- */
+.offer-card--women {
+  background-color: #fbf0ee;
+  border: 1px solid #fae2dd;
+  color: #681d28;
+}
+
+.offer-card--women .offer-card-badge {
+  background-color: #ffffff;
+  color: #681d28;
+  border: 1px solid rgba(104, 29, 40, 0.12);
+}
+
+.offer-card--women .offer-card-heading,
+.offer-card--women .offer-discount-large,
+.offer-card--women .offer-discount-small {
+  color: #681d28;
+}
+
+.offer-card--women .offer-card-description {
+  color: #724b52;
+}
+
+.offer-card--women .offer-card-btn {
+  background-color: #681d28;
+  color: #ffffff;
+}
+
+.offer-card--women .offer-card-btn:hover {
+  background-color: #52151f;
+}
+
+/* --- THEME 2: MENSWEAR (Cream / Warm Ochre Brown) --- */
+.offer-card--men {
+  background-color: #fbf5eb;
+  border: 1px solid #f2e7d5;
+  color: #784824;
+}
+
+.offer-card--men .offer-card-badge {
+  background-color: #ffffff;
+  color: #784824;
+  border: 1px solid rgba(120, 72, 36, 0.15);
+}
+
+.offer-card--men .offer-card-heading,
+.offer-card--men .offer-discount-large,
+.offer-card--men .offer-discount-small {
+  color: #824a1b;
+}
+
+.offer-card--men .offer-card-description {
+  color: #735848;
+}
+
+.offer-card--men .offer-card-btn {
+  background-color: #6a3e1b;
+  color: #ffffff;
+}
+
+.offer-card--men .offer-card-btn:hover {
+  background-color: #553014;
+}
+
+/* --- THEME 3: CRIMSON HUES (Deep Maroon Card / Mustard CTA) --- */
+.offer-card--crimson {
+  background-color: #671f29;
+  border: 1px solid #5a1821;
+  color: #ffffff;
+}
+
+.offer-card--crimson .offer-card-badge {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #e5a76b;
+  border: 1px solid rgba(229, 167, 107, 0.3);
+}
+
+.offer-card--crimson .offer-card-heading {
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: 2.1rem;
+  font-weight: 700;
+  text-transform: none;
+  letter-spacing: 0;
+  margin: 12px 0 16px 0;
+  color: #ffffff;
+}
+
+.offer-card--crimson .offer-card-description {
+  color: rgba(255, 255, 255, 0.82);
+  margin-top: 10px;
+}
+
+.offer-card--crimson .offer-card-btn {
+  background-color: #df9b5b;
+  color: #2b0b10;
+}
+
+.offer-card--crimson .offer-card-btn:hover {
+  background-color: #cd8a4b;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .offers-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .offer-card--crimson {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 640px) {
+  .offers-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .offer-card--crimson {
+    grid-column: span 1;
+  }
+
+  .offer-card {
+    min-height: auto;
+    padding: 28px 18px;
+    gap: 24px;
+  }
+
+  .offer-card-btn {
+    width: 100%;
+  }
+}

@@ -1,0 +1,679 @@
+/* src/components/CategoryNav.css */
+
+.category-navbar-wrap {
+  position: relative;
+  background: #ffffff;
+  border-bottom: 1px solid #e8ded4;
+  z-index: 1000;
+  width: 100%;
+}
+
+.nav-items-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0 15px;
+  gap: 24px;
+}
+
+.nav-item {
+  padding: 14px 0;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #2b0b10;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  transition: color 0.2s ease;
+  white-space: nowrap;
+}
+
+.nav-link:hover,
+.sale-link {
+  color: #8b263e;
+}
+
+/* ================= MEGA DROPDOWN BOX ================= */
+.mega-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  max-width: 100vw;
+  background: #ffffff !important; /* Piche ka slider chhipane ke liye solid white */
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+  border-top: 1px solid #ebd9c8;
+  border-bottom: 2px solid #551922;
+  padding: 30px 40px;
+  box-sizing: border-box;
+  z-index: 99999 !important;
+}
+
+.mega-dropdown-content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr) 240px;
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.dropdown-col {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main Subheading (Jaise Ethnic Wear, Western Wear) */
+.section-title,
+.section-title a {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  color: #7b2933 !important; /* Fabindia brand maroon */
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+  text-decoration: none;
+  margin: 0 0 10px 0;
+}
+
+.top-category-link a {
+  font-size: 15px !important;
+  font-weight: 800 !important;
+  color: #551922 !important;
+  text-decoration: none;
+  margin-bottom: 12px;
+  display: inline-block;
+  border-bottom: 2px solid #551922;
+  padding-bottom: 3px;
+}
+
+/* Links List */
+.sub-links-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sub-links-list li a {
+  text-decoration: none;
+  font-size: 13px !important;
+  color: #4a4a4a !important;
+  line-height: 1.4;
+  font-weight: 400 !important;
+  transition: all 0.15s ease;
+}
+
+.sub-links-list li a:hover {
+  color: #8b263e !important;
+  padding-left: 4px;
+}
+
+.mt-16 {
+  margin-top: 18px !important;
+}
+
+/* Right Badge / Promo Card */
+.banner-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: 1px solid #f2e9e1;
+  padding-left: 20px;
+}
+
+.promo-badge-card {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: #fbf6f0;
+  border: 1px dashed #c59b6d;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.promo-badge-tag {
+  font-size: 10px;
+  color: #9c6c3e;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.promo-badge-title {
+  font-family: 'Georgia', serif;
+  font-size: 18px;
+  color: #551922;
+  font-weight: bold;
+  margin: 6px 0;
+}
+
+.promo-badge-sub {
+  font-size: 11px;
+  color: #666;
+}
+
+/* ================= MEN DROPDOWN STYLING ================= */
+.men-mega-menu {
+  background: #ffffff !important;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1) !important;
+  padding: 32px 50px !important;
+  border-top: 1px solid #ebd9c8 !important;
+  border-bottom: 2px solid #7b2933 !important;
+}
+
+.men-dropdown-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 36px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.men-col {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Headings with delicate bottom underline like in screenshot */
+.col-heading-wrap {
+  display: inline-block;
+  width: fit-content;
+  border-bottom: 1.5px solid #8b3a42;
+  padding-bottom: 3px;
+  margin-bottom: 12px;
+}
+
+.men-main-heading {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: #8b3a42;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  display: inline-block;
+}
+
+.men-main-heading:hover {
+  color: #551922;
+}
+
+.men-sale-title {
+  color: #8b3a42 !important;
+}
+
+/* Sub-items links list */
+.men-sub-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.men-sub-list li a {
+  text-decoration: none;
+  font-size: 13.5px;
+  color: #3b3b3b;
+  font-weight: 400;
+  line-height: 1.4;
+  transition: color 0.15s ease, padding-left 0.15s ease;
+  display: inline-block;
+}
+
+.men-sub-list li a:hover {
+  color: #8b3a42;
+  padding-left: 3px;
+}
+
+/* Spacing classes */
+.mb-18 {
+  margin-bottom: 18px !important;
+}
+
+.mt-22 {
+  margin-top: 22px !important;
+}
+
+/* ================= HOME & LIVING DROPDOWN STYLING ================= */
+.home-mega-menu {
+  background: #ffffff !important;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.1) !important;
+  padding: 30px 48px !important;
+  border-top: 1px solid #ebd9c8 !important;
+  border-bottom: 2px solid #7b2933 !important;
+}
+
+.home-dropdown-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.home-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.home-main-heading {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: #8b3a42;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  display: inline-block;
+}
+
+.home-main-heading:hover {
+  color: #551922;
+}
+
+.home-sub-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.home-sub-list li a {
+  text-decoration: none;
+  font-size: 13.5px;
+  color: #3b3b3b;
+  font-weight: 400;
+  line-height: 1.35;
+  transition: color 0.15s ease, padding-left 0.15s ease;
+  display: inline-block;
+}
+
+.home-sub-list li a:hover {
+  color: #8b3a42;
+  padding-left: 3px;
+}
+
+.mt-20 {
+  margin-top: 20px !important;
+}
+
+/* ================= KIDS DROPDOWN STYLING ================= */
+.kids-mega-menu {
+  background: #ffffff !important;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1) !important;
+  padding: 32px 50px !important;
+  border-top: 1px solid #ebd9c8 !important;
+  border-bottom: 2px solid #7b2933 !important;
+}
+
+.kids-dropdown-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 36px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.kids-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.kids-main-heading {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: #8b3a42;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  display: inline-block;
+}
+
+.kids-main-heading:hover {
+  color: #551922;
+}
+
+.kids-sub-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.kids-sub-list li a {
+  text-decoration: none;
+  font-size: 13.5px;
+  color: #3b3b3b;
+  font-weight: 400;
+  line-height: 1.4;
+  transition: color 0.15s ease, padding-left 0.15s ease;
+  display: inline-block;
+}
+
+.kids-sub-list li a:hover {
+  color: #8b3a42;
+  padding-left: 3px;
+}
+
+.kids-sale-title {
+  color: #8b3a42 !important;
+}
+/* ================= FURNITURE DROPDOWN STYLING ================= */
+.furniture-mega-menu {
+  background: #ffffff !important;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1) !important;
+  padding: 32px 50px !important;
+  border-top: 1px solid #ebd9c8 !important;
+  border-bottom: 2px solid #7b2933 !important;
+}
+
+.furniture-dropdown-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 36px;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.furniture-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.furniture-main-heading {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: #8b3a42;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  display: inline-block;
+}
+
+.furniture-main-heading:hover {
+  color: #551922;
+}
+
+.furniture-sub-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.furniture-sub-list li a {
+  text-decoration: none;
+  font-size: 13.5px;
+  color: #3b3b3b;
+  font-weight: 400;
+  line-height: 1.4;
+  transition: color 0.15s ease, padding-left 0.15s ease;
+  display: inline-block;
+}
+
+.furniture-sub-list li a:hover {
+  color: #8b3a42;
+  padding-left: 3px;
+}
+
+.furniture-sale-title {
+  color: #8b3a42 !important;
+}
+
+/* ================= BEAUTY & WELLNESS DROPDOWN STYLING ================= */
+.beauty-mega-menu {
+  background: #ffffff !important;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1) !important;
+  padding: 32px 50px !important;
+  border-top: 1px solid #ebd9c8 !important;
+  border-bottom: 2px solid #7b2933 !important;
+}
+
+.beauty-dropdown-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 36px;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.beauty-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.beauty-main-heading {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: #8b3a42;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  display: inline-block;
+}
+
+.beauty-main-heading:hover {
+  color: #551922;
+}
+
+.beauty-sub-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.beauty-sub-list li a {
+  text-decoration: none;
+  font-size: 13.5px;
+  color: #3b3b3b;
+  font-weight: 400;
+  line-height: 1.4;
+  transition: color 0.15s ease, padding-left 0.15s ease;
+  display: inline-block;
+}
+
+.beauty-sub-list li a:hover {
+  color: #8b3a42;
+  padding-left: 3px;
+}
+
+.beauty-sale-title {
+  color: #8b3a42 !important;
+}
+
+/* ================= FESTIVE '24 DROPDOWN STYLING ================= */
+.festive-mega-menu {
+  background: #ffffff !important;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1) !important;
+  padding: 32px 50px !important;
+  border-top: 1px solid #ebd9c8 !important;
+  border-bottom: 2px solid #7b2933 !important;
+}
+
+.festive-dropdown-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 36px;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.festive-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.festive-main-heading {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: #8b3a42;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  display: inline-block;
+}
+
+.festive-main-heading:hover {
+  color: #551922;
+}
+
+.festive-sub-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.festive-sub-list li a {
+  text-decoration: none;
+  font-size: 13.5px;
+  color: #3b3b3b;
+  font-weight: 400;
+  line-height: 1.4;
+  transition: color 0.15s ease, padding-left 0.15s ease;
+  display: inline-block;
+}
+
+.festive-sub-list li a:hover {
+  color: #8b3a42;
+  padding-left: 3px;
+}
+
+.festive-sale-title {
+  color: #8b3a42 !important;
+}
+
+/* ================= COLLECTION DROPDOWN STYLING ================= */
+.collection-strip-menu {
+  background: #ffffff !important;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1) !important;
+  padding: 36px 60px !important;
+  border-top: 1px solid #ebd9c8 !important;
+  border-bottom: 2px solid #7b2933 !important;
+}
+
+.collection-strip-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.coll-strip-col {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Screenshot jaisa delicate underline */
+.coll-underline-wrap {
+  display: inline-block;
+  width: fit-content;
+  border-bottom: 1.5px solid #8b3a42;
+  padding-bottom: 2px;
+}
+
+.coll-strip-link {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 15.5px;
+  font-weight: 600;
+  color: #8b3a42;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: color 0.15s ease, opacity 0.15s ease;
+  display: inline-block;
+}
+
+.coll-strip-link:hover {
+  color: #551922;
+  opacity: 0.85;
+}
+
+.mt-24 {
+  margin-top: 24px !important;
+}
+
+/* ================= SALE & OFFERS DROPDOWN STYLING ================= */
+.sale-mega-menu {
+  background: #ffffff !important;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1) !important;
+  padding: 32px 50px !important;
+  border-top: 1px solid #ebd9c8 !important;
+  border-bottom: 2px solid #a82333 !important;
+}
+
+.sale-dropdown-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 36px;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.sale-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.sale-main-heading {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: #a82333; /* Prominent Sale Crimson */
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  display: inline-block;
+}
+
+.sale-main-heading:hover {
+  color: #7a1522;
+}
+
+.sale-sub-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.sale-sub-list li a {
+  text-decoration: none;
+  font-size: 13.5px;
+  color: #3b3b3b;
+  font-weight: 400;
+  line-height: 1.4;
+  transition: color 0.15s ease, padding-left 0.15s ease;
+  display: inline-block;
+}
+
+.sale-sub-list li a:hover {
+  color: #a82333;
+  padding-left: 3px;
+}
+
+.sale-highlight-title {
+  color: #a82333 !important;
+  font-weight: 700;
+}

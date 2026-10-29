@@ -1,0 +1,99 @@
+.decor-header-container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 40px 24px 20px 24px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  background-color: #faf7f2;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  box-sizing: border-box;
+}
+
+.decor-header-left {
+  max-width: 750px;
+}
+
+/* 1. Subtitle (LIVING & PUJA DECOR) */
+.decor-subtitle {
+  display: block;
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  color: #a85233; /* Warm terracotta/rust shade */
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+/* 2. Main Heading (ARTFUL DETAILS FOR FESTIVE DAYS) */
+.decor-title {
+  font-family: Georgia, "Playfair Display", serif;
+  font-size: 38px;
+  font-weight: 800;
+  color: #3b1019; /* Deep burgundy/maroon */
+  text-transform: uppercase;
+  margin: 0 0 10px 0;
+  letter-spacing: 0.5px;
+  line-height: 1.15;
+}
+
+/* 3. Description */
+.decor-description {
+  font-size: 14.5px;
+  color: #6e6157;
+  line-height: 1.5;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* 4. Right: VIEW ALL BRASSWARE link */
+.decor-view-all {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  color: #591621;
+  text-decoration: none;
+  white-space: nowrap;
+  padding-bottom: 6px;
+  transition: opacity 0.2s ease;
+}
+
+.decor-view-all:hover {
+  opacity: 0.8;
+}
+
+.decor-view-all .arrow-icon {
+  font-size: 15px;
+  transition: transform 0.25s ease;
+}
+
+.decor-view-all:hover .arrow-icon {
+  transform: translateX(4px);
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .decor-header-container {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 28px 16px 14px 16px;
+    gap: 16px;
+  }
+
+  .decor-title {
+    font-size: 26px;
+  }
+
+  .decor-subtitle {
+    font-size: 11px;
+    letter-spacing: 1.8px;
+  }
+
+  .decor-description {
+    font-size: 13.5px;
+  }
+}

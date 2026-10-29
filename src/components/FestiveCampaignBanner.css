@@ -1,0 +1,157 @@
+/* FestiveCampaignBanner.css */
+
+.campaign-banner-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.campaign-banner-card {
+  position: relative;
+  width: 100%;
+  background: radial-gradient(ellipse at center, #5e1923 0%, #300a10 100%);
+  padding: 56px 24px;
+  overflow: hidden;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* Subtle decorative radial glow */
+.campaign-banner-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  height: 60%;
+  background: radial-gradient(circle, rgba(223, 155, 91, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Content Container */
+.campaign-banner-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Tag Pill / Badge */
+.campaign-badge {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(223, 155, 91, 0.35);
+  color: #df9b5b;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 5px 18px;
+  border-radius: 9999px;
+  margin-bottom: 20px;
+}
+
+/* Main Heading */
+.campaign-title {
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: clamp(1.6rem, 3.5vw, 2.35rem);
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin: 0 0 16px 0;
+  line-height: 1.25;
+}
+
+/* Subtitle / Description */
+.campaign-desc {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 650px;
+  margin: 0 auto 32px auto;
+  font-weight: 300;
+}
+
+/* Button Container */
+.campaign-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Shared Button Styles */
+.btn-primary-gold,
+.btn-outline-festive {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 12px 28px;
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+/* Primary Mustard/Gold Button */
+.btn-primary-gold {
+  background-color: #df9b5b;
+  color: #2b0b10;
+  border: 1px solid #df9b5b;
+}
+
+.btn-primary-gold:hover {
+  background-color: #cb884a;
+  border-color: #cb884a;
+}
+
+/* Secondary Outlined/Translucent Button */
+.btn-outline-festive {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.btn-outline-festive:hover {
+  background-color: rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .campaign-banner-card {
+    padding: 36px 16px;
+  }
+
+  .campaign-desc {
+    font-size: 0.85rem;
+    margin-bottom: 24px;
+  }
+
+  .campaign-buttons {
+    flex-direction: column;
+    width: 100%;
+    max-width: 280px;
+    gap: 12px;
+  }
+
+  .btn-primary-gold,
+  .btn-outline-festive {
+    width: 100%;
+  }
+}
